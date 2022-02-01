@@ -120,6 +120,7 @@
     {
       id: 1,
       num: 6,
+      label: "6. Vaud Promotion",
       CX: 3,
       PI: 2.67,
       ST: 3,
@@ -133,6 +134,7 @@
     {
       id: 2,
       num: 2,
+      label: "2. Vaud Promotion",
       CX: 2.67,
       PI: 4,
       ST: 3.5,
@@ -146,6 +148,7 @@
     {
       id: 3,
       num: 11,
+      label: "11.",
       CX: 2,
       PI: 2,
       ST: 2,
@@ -159,6 +162,7 @@
     {
       id: 4,
       num: 4,
+      label: "4. Vaud Promotion",
       CX: 2.33,
       PI: 2.67,
       ST: 2.5,
@@ -172,6 +176,7 @@
     {
       id: 5,
       num: 1,
+      label: "1. Vaud Promotion",
       CX: 5,
       PI: 4.33,
       ST: 4.5,
@@ -185,6 +190,7 @@
     {
       id: 6,
       num: 10,
+      label: "10. Vaud Promotion",
       CX: 3,
       PI: 2.67,
       ST: 2,
@@ -198,6 +204,7 @@
     {
       id: 7,
       num: 3,
+      label: "3. VaudPromotion-Marketing&Communication-PAGremaud",
       CX: 3.33,
       PI: 3,
       ST: 4.5,
@@ -211,6 +218,7 @@
     {
       id: 8,
       num: 7,
+      label: "7. Vaud Promotino",
       CX: 2.67,
       PI: 2.67,
       ST: 2,
@@ -224,6 +232,7 @@
     {
       id: 9,
       num: 8,
+      label: "8. VaudPromotion-Marketing-CMoix",
       CX: 2.33,
       PI: 2.33,
       ST: 2.5,
@@ -237,6 +246,7 @@
     {
       id: 10,
       num: 9,
+      label: "9. Vaud Promotion",
       CX: 2.67,
       PI: 2.33,
       ST: 2.5,
@@ -250,6 +260,7 @@
     {
       id: 11,
       num: 5,
+      label: "5. VaudPromotion-Presse-CarolineEggenschwiler",
       CX: 2.67,
       PI: 2.33,
       ST: 2.5,
@@ -267,7 +278,7 @@
     let labels = [];
     for (let data of datas) {
       values.push([data.CX, data.PI, data.ST, data.OR, data.PD, data.CO, data.CU, data.IT, data.TM]);
-      labels.push(data.num);
+      labels.push(data.label);
     }
     return { values: values, labels: labels };
   }

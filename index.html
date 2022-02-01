@@ -266,6 +266,8 @@
     },
   ];
 
+  let dataLength = data.length;
+
   function toChartArrays(datas) {
     let values = [];
     let labels = [];
@@ -304,6 +306,7 @@
         label: labels[i],
         data: values[i],
         fill: true,
+        order: data[i].num,
       };
 
       datasets.push(dataset);

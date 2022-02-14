@@ -46,14 +46,12 @@
       "Organisation",
       ["Digitalisation des ", "processus"],
       "Collaboration",
-      ["Technologie de ", "l’information"],
       "Culture et expertise",
+      ["Technologie de ", "l’information"],
       ["Gestion de ", "la transformation"],
     ];
 
     let datasets = makeDatasets(data);
-
-    console.log(datasets);
 
     let ctx = document.getElementById("radar-canvas").getContext("2d");
 
@@ -105,7 +103,7 @@
     let chart = new Chart(ctx, config);
   });
 
-  const DEFAULT_COLORS = ["#2F80ED", "#9B51E0", "#828282", "#f53794", "#537bc4", "#acc236", "#166a8f", "#00a950", "#58595b", "#8549ba", "#f67019"];
+  const DEFAULT_COLORS = ["#2F80ED", "#9B51E0", "#828282", "#f53794", "#537bc4", "#acc236", "#166a8f", "#00a950", "#58595b", "#8549ba", "#f67019", "#A288E3", "#CA3C25", "#FFBF00"];
 
   let data = [
     {
@@ -261,6 +259,48 @@
       CU: 2.67,
       IT: 1.25,
       TM: 2,
+    },
+    {
+      id: 12,
+      num: 12,
+      label: "12. Vaud Promotion",
+      CX: 3.67,
+      PI: 2.33,
+      ST: 1.5,
+      OR: 2,
+      PD: 2.67,
+      CO: 2.67,
+      CU: 3.67,
+      IT: 1.75,
+      TM: 1.67,
+    },
+    {
+      id: 13,
+      num: 13,
+      label: "13. Vaud Promotion",
+      CX: 2,
+      PI: 1.33,
+      ST: 1,
+      OR: 2,
+      PD: 1,
+      CO: 1.67,
+      CU: 2,
+      IT: 1,
+      TM: 1,
+    },
+    {
+      id: 14,
+      num: 14,
+      label: "14. Vaud Promotion",
+      CX: 1,
+      PI: 2.33,
+      ST: 1,
+      OR: 2,
+      PD: 4,
+      CO: 2.67,
+      CU: 3,
+      IT: 2.75,
+      TM: 2.67,
     },
   ];
 

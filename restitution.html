@@ -11,12 +11,21 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        font-family: sans-serif;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      #page-wrapper {
+        display: flex;
+        justify-content: center;
       }
       #content-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 80%;
         height: 100vh;
       }
       #canvas-container {
@@ -25,12 +34,107 @@
         margin-left: 0 auto;
         margin-right: 0 auto;
       }
+      .header {
+        padding: 0 2em 0 2em;
+        border-bottom: 1px solid lightgrey;
+        display: flex;
+        justify-content: space-between;
+      }
+      .header-titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .logos {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+      }
+      .dimension-tile {
+        border: 1px solid lightgrey;
+        padding: 10px;
+      }
+      .dimension-title-text {
+        font-size: 1.4em;
+        padding-bottom: 5px;
+      }
+      .parag {
+        font-size: 1em;
+      }
     </style>
   </head>
   <body>
-    <div id="content-wrapper">
-      <div id="canvas-container">
-        <canvas id="radar-canvas" width="400" height="400"></canvas>
+    <div class="header">
+      <div class="header-titles">
+        <h3>Atelier transformation digitale</h3>
+        <p>23 mai 2022</p>
+      </div>
+      <div class="logos">
+        <img src="micronarc-logo.svg" height="100" />
+        <img src="logo-dah.svg" height="60" />
+      </div>
+    </div>
+    <div id="page-wrapper">
+      <div id="content-wrapper">
+        <div id="canvas-container">
+          <canvas id="radar-canvas" width="400" height="400"></canvas>
+        </div>
+        <div class="dimensions">
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Expérience client (CX)</h3>
+              <p class="parag">Réponds à l’attente des clients vis-à-vis des services et produits digitaux qu’ils tiennent pour acquis.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Innovation des produits et des services (PI)</h3>
+              <p class="parag">Soutien de la direction et reconnaissance de l’opportunité que représente la transformation digitale.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Stratégie (ST)</h3>
+              <p class="parag">Incorporation du digital au sein de la stratégie de l’organisation.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Organisation (OR)</h3>
+              <p class="parag">Incorporation du digital à tous les niveaux de l’organisation, et non plus comme entité séparée.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Digitalisation des processus (PD)</h3>
+              <p class="parag">Simplification, unification et automatisation des processus internes.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Collaboration (CO)</h3>
+              <p class="parag">Amélioration de la collaboration et de la communication entre les collaborateurs et les équipes.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Culture et expertise (CU)</h3>
+              <p class="parag">Ouverture aux nouvelles technologies et aux changements qui y sont associés.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Technologies de l'information (IT)</h3>
+              <p class="parag">Souplesse et agilité du système d’information pour le succès des projets digitaux.</p>
+            </div>
+          </div>
+          <div class="dimension-tile">
+            <div>
+              <h3 class="dimension-title-text">Gestion de la transformation (TM)</h3>
+              <p class="parag">Soutien de la direction et reconnaissance de l’opportunité que représente la transformation digitale.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

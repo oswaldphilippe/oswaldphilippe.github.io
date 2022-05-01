@@ -24,13 +24,13 @@
       #content-wrapper {
         display: flex;
         justify-content: center;
-        align-items: center;
         width: 80%;
         height: 100vh;
+        padding-top: 2em;
       }
       #canvas-container {
         width: 90%;
-        height: 90%;
+        height: 100%;
         margin-left: 0 auto;
         margin-right: 0 auto;
       }
@@ -39,6 +39,9 @@
         border-bottom: 1px solid lightgrey;
         display: flex;
         justify-content: space-between;
+        height: 80px;
+        -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.11);
+        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.11);
       }
       .header-titles {
         display: flex;
@@ -49,17 +52,23 @@
         display: flex;
         align-items: center;
         justify-content: right;
+        height: 100%;
+        padding: 10px;
+      }
+      .logos img {
+        height: 100%;
       }
       .dimension-tile {
-        border: 1px solid lightgrey;
+        border-bottom: 1px solid rgb(214, 214, 214);
         padding: 10px;
       }
       .dimension-title-text {
-        font-size: 1.4em;
+        font-size: 1em;
         padding-bottom: 5px;
       }
       .parag {
-        font-size: 1em;
+        font-size: 0.8em;
+        color: rgb(170, 170, 170);
       }
     </style>
   </head>
@@ -70,8 +79,8 @@
         <p>23 mai 2022</p>
       </div>
       <div class="logos">
-        <img src="micronarc-logo.svg" height="100" />
-        <img src="logo-dah.svg" height="60" />
+        <img src="micronarc-logo.svg" style="height: 75px" />
+        <img src="logo-dah.svg" style="height: 48px" />
       </div>
     </div>
     <div id="page-wrapper">
@@ -82,55 +91,55 @@
         <div class="dimensions">
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Expérience client (CX)</h3>
+              <h3 class="dimension-title-text">1. Expérience client (CX)</h3>
               <p class="parag">Réponds à l’attente des clients vis-à-vis des services et produits digitaux qu’ils tiennent pour acquis.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Innovation des produits et des services (PI)</h3>
+              <h3 class="dimension-title-text">2. Innovation des produits et des services (PI)</h3>
               <p class="parag">Soutien de la direction et reconnaissance de l’opportunité que représente la transformation digitale.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Stratégie (ST)</h3>
+              <h3 class="dimension-title-text">3. Stratégie (ST)</h3>
               <p class="parag">Incorporation du digital au sein de la stratégie de l’organisation.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Organisation (OR)</h3>
+              <h3 class="dimension-title-text">4. Organisation (OR)</h3>
               <p class="parag">Incorporation du digital à tous les niveaux de l’organisation, et non plus comme entité séparée.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Digitalisation des processus (PD)</h3>
+              <h3 class="dimension-title-text">5. Digitalisation des processus (PD)</h3>
               <p class="parag">Simplification, unification et automatisation des processus internes.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Collaboration (CO)</h3>
+              <h3 class="dimension-title-text">6. Collaboration (CO)</h3>
               <p class="parag">Amélioration de la collaboration et de la communication entre les collaborateurs et les équipes.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Culture et expertise (CU)</h3>
+              <h3 class="dimension-title-text">7. Culture et expertise (CU)</h3>
               <p class="parag">Ouverture aux nouvelles technologies et aux changements qui y sont associés.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Technologies de l'information (IT)</h3>
+              <h3 class="dimension-title-text">8. Technologies de l'information (IT)</h3>
               <p class="parag">Souplesse et agilité du système d’information pour le succès des projets digitaux.</p>
             </div>
           </div>
           <div class="dimension-tile">
             <div>
-              <h3 class="dimension-title-text">Gestion de la transformation (TM)</h3>
+              <h3 class="dimension-title-text">9. Gestion de la transformation (TM)</h3>
               <p class="parag">Soutien de la direction et reconnaissance de l’opportunité que représente la transformation digitale.</p>
             </div>
           </div>

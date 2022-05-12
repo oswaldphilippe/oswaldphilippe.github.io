@@ -429,5 +429,3 @@ const questions = {
     order: 10,
   },
 };
-
-console.log("Bonjour");

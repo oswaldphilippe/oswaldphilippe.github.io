@@ -8,28 +8,13 @@
   </head>
   <body>
     <div id="app" class="p-4">
-      <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" class="shadow rounded overflow-hidden p-4 mb-6">
-        <div class="text-xl font-black mb-6">{{ questionGroup.name }} ({{ groupCode }})</div>
-        <div v-for="criteria, criteriaCode  in questionGroup.questions" :key="criteriaCode" class="rounded overflow-hidden">
-          <div class="font-bold bg-slate-200 p-3">{{ criteria.name }} ({{ criteriaCode }})</div>
-          <div class="flex items-stretch mb-4 border">
-            <div v-for="answerObject, index in criteria.answers" :key="index" class="basis-0 flex-grow border-x">
-              <template v-for="text, value in answerObject" :key="value">
-                <div class="flex flex-col justify-items-stretch">
-                  <div class="p-3 border-y">{{ value }}</div>
-                  <div class="p-3">{{ text }}</div>
-                </div>
-              </template>
-            </div>
-          </div>
-          <div class="will-hold-a-canvas"></div>
-        </div>
-      </div>
+      <app></app>
     </div>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js" integrity="sha256-ErZ09KkZnzjpqcane4SCyyHsKAXMvID9/xwbl/Aq1pc=" crossorigin="anonymous"></script>
     <script src="micronarc/scripts/data.js"></script>
-    <script src="micronarc/scripts/vue-app.js"></script>
+    <script type="module" src="micronarc/scripts/vue-app.js"></script>
   </body>
 </html>

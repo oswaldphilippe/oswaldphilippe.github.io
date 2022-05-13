@@ -91,6 +91,7 @@ const participants = {
       ST: { score: 2.896551724137931, criterias: { ST1: 2.7586206896551726, ST2: 3.0344827586206895 } },
       TM: { score: 2.471264367816092, criterias: { TM1: 2.086206896551724, TM2: 2.0517241379310347, TM3: 3.2758620689655173 } },
     },
+    company_name: "Maturité digitale globale",
   },
 };
 

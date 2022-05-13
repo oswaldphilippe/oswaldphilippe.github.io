@@ -36,6 +36,14 @@ export default {
     },
 
     generateChart() {
+      // Lower opacity as all data will overlap
+      for (let i = 0; i < this.datasets.length; i++) {
+        let ds = this.datasets[i];
+        let color = ds.backgroundColor;
+        ds.backgroundColor = this.hexToRGB(ds.backgroundColor, 0.7);
+        ds.borderColor = color;
+        ds.pointBackgroundColor = color;
+      }
       const ctx = this.$refs[this.computedRef];
       new Chart(ctx, {
         type: "bar",
@@ -59,6 +67,15 @@ export default {
           plugins: {
             legend: {
               position: "bottom",
+              align: "start",
+              labels: {
+                usePointStyle: true,
+                pointStyle: "circle",
+                boxWidth: 6,
+                font: {
+                  size: 16,
+                },
+              },
             },
           },
           elements: {
@@ -69,6 +86,18 @@ export default {
           },
         },
       });
+    },
+
+    hexToRGB(hex, alpha) {
+      var r = parseInt(hex.slice(1, 3), 16),
+        g = parseInt(hex.slice(3, 5), 16),
+        b = parseInt(hex.slice(5, 7), 16);
+
+      if (alpha) {
+        return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
+      } else {
+        return "rgb(" + r + ", " + g + ", " + b + ")";
+      }
     },
   },
 

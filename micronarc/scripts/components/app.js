@@ -80,8 +80,8 @@ export default {
       <h2 class="font-bold text-2xl mb-4">Détail des dimensions</h2>
       <hr class="my-8"/>
       <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" class="shadow rounded overflow-hidden px-20 py-11 mb-11 bg-white">
-      <div class="text-lg font-semibold mb-6">{{ questionGroup.name }} ({{ groupCode }})</div>
-      <div v-for="criteria, criteriaCode  in questionGroup.questions" :key="criteriaCode" class="rounded overflow-hidden">
+      <div class="text-2xl mb-8" style="margin-left:6px;margin-right:10px;">{{ questionGroup.name }} ({{ groupCode }})</div>
+      <div v-for="criteria, criteriaCode  in questionGroup.questions" :key="criteriaCode" class="rounded overflow-hidden mb-11">
         <div class="font-bold bg-slate-200 p-3" style="margin-left:6px;margin-right:10px;">{{ criteria.name }} ({{ criteriaCode }})</div>
         <div class="shadow-lg answers-container flex items-stretch border mx-1" style="margin-left:6px;margin-right:10px;">
           <div v-for="answerObject, index in criteria.answers" :key="index" class="basis-0 flex-grow border-x">

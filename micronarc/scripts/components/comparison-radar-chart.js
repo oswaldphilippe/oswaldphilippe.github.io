@@ -36,7 +36,7 @@ export default {
       for (let i = 0; i < this.datasets.length; i++) {
         let ds = this.datasets[i];
         let color = ds.backgroundColor;
-        ds.backgroundColor = this.hexToRGB(ds.backgroundColor, 0.2);
+        ds.backgroundColor = this.hexToRGB(ds.backgroundColor, 0.02);
         ds.borderColor = color;
         ds.pointBackgroundColor = color;
       }

@@ -1,6 +1,6 @@
 export default {
   template: `
-    <div>
+    <div class="p-8">
         <slot></slot>
     </div>`,
 };

@@ -4,6 +4,7 @@ import ComparisonRadarChart from "./components/comparison-radar-chart.js";
 import ComparisonBarChart from "./components/comparison-bar-chart.js";
 import CriteriaComparison from "./components/criteria-comparison.js";
 import DimensionAverageComparison from "./components/dimension-average-comparison.js";
+import AppHeader from "./components/app-header.js";
 
 const app = Vue.createApp({});
 
@@ -13,5 +14,6 @@ app.component("comparison-radar-chart", ComparisonRadarChart);
 app.component("comparison-bar-chart", ComparisonBarChart);
 app.component("criteria-comparison", CriteriaComparison);
 app.component("dimension-average-comparison", DimensionAverageComparison);
+app.component("app-header", AppHeader);
 
 app.mount("#app");

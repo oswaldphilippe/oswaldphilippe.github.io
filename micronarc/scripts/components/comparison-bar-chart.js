@@ -2,16 +2,12 @@ export default {
   data() {
     return {
       uuid: this.generateUUID(),
-      dummySets: [
-        { label: "dataset1", data: [1] },
-        { label: "dataset2", data: [2] },
-      ],
     };
   },
 
   props: {
     labels: {
-      type: String,
+      type: Array,
       required: true,
     },
     datasets: {
@@ -69,18 +65,11 @@ export default {
             bar: {
               borderRadius: 10,
               backgroundColor: "blue",
-              barPercentage: 0.1,
             },
           },
         },
       });
     },
-
-    // watch: {
-    //   datasets: function (val) {
-    //     this.generateChart();
-    //   },
-    // },
   },
 
   template: `<div class="canvas-container">

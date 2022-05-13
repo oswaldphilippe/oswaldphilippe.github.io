@@ -48,6 +48,6 @@ export default {
   },
 
   template: `
-    <comparison-radar-chart v-if="datasets" :datasets="datasets" :labels="labels" class="h-screen"></comparison-radar-chart>
+    <comparison-radar-chart v-if="datasets" :datasets="datasets" :labels="labels"></comparison-radar-chart>
   `,
 };

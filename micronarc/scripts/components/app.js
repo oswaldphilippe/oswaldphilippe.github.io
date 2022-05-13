@@ -65,7 +65,16 @@ export default {
   <content-wrapper>
     <div>
     <h2 class="font-bold text-2xl mb-8">Moyenne de maturité digitale par dimension</h2>
-        <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8"></dimension-average-comparison>
+      <div class="flex justify-items-stretch w-100" style="height:90vh;">
+        <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8 basis-0 grow"></dimension-average-comparison>
+        <div class="ml-4">
+          <div v-for="questionGroup, index in questionGroups" :key="questionGroup.code">
+            <div class="font-bold">{{ questionGroup.name }}</div>
+            <div class="text-gray-500">{{ questionGroup.description }}</div>
+            <hr class="my-3" />
+          </div>
+        </div>
+      </div>
       </div>
       <h2 class="font-bold text-2xl mb-8">Détail des dimensions</h2>
       <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" class="shadow rounded overflow-hidden px-20 py-11 mb-11 bg-white">

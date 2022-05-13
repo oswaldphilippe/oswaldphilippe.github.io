@@ -64,7 +64,8 @@ export default {
   template: `
   <content-wrapper>
     <div>
-    <h2 class="font-bold text-2xl mb-8">Moyenne de maturité digitale par dimension</h2>
+    <h2 class="font-bold text-2xl mb-4">Moyenne de maturité digitale par dimension</h2>
+    <hr class="my-8"/>
       <div class="flex justify-items-stretch w-100" style="height:90vh;">
         <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8 basis-0 grow"></dimension-average-comparison>
         <div class="ml-4">
@@ -76,7 +77,8 @@ export default {
         </div>
       </div>
       </div>
-      <h2 class="font-bold text-2xl mb-8">Détail des dimensions</h2>
+      <h2 class="font-bold text-2xl mb-4">Détail des dimensions</h2>
+      <hr class="my-8"/>
       <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" class="shadow rounded overflow-hidden px-20 py-11 mb-11 bg-white">
       <div class="text-lg font-semibold mb-6">{{ questionGroup.name }} ({{ groupCode }})</div>
       <div v-for="criteria, criteriaCode  in questionGroup.questions" :key="criteriaCode" class="rounded overflow-hidden">

@@ -19,7 +19,17 @@ export default {
   },
 
   beforeMount() {
-    this.addColorsToParticipants({ "FELCO SA": "#00BC62", "Maturité digitale globale": "#080036" });
+    const participantsColors = {
+      "FELCO SA": "#00BC62",
+      "Maturité digitale globale": "#080036",
+      "NID SA": "#D20000",
+      "HL-Technology SA": "#FF822C",
+      "Ressorts Industriels SA": "#FFC700",
+      "FAJI SA": "#A288E3",
+      "Sored SA": "#319FFF",
+      Medtronic: "#4808D1",
+    };
+    this.addColorsToParticipants(participantsColors);
   },
 
   methods: {

@@ -19,13 +19,35 @@ export default {
   },
 
   beforeMount() {
-    this.addColorsToParticipants();
+    this.addColorsToParticipants({ "FELCO SA": "#00BC62", "Maturité digitale globale": "#080036" });
   },
 
   methods: {
     addColorsToParticipants(staticParticipantsColors = {}) {
       const usedColors = new Set();
-      const DEFAULT_COLORS = ["#2F80ED", "#9B51E0", "#828282", "#f53794", "#537bc4", "#acc236", "#166a8f", "#00a950", "#58595b", "#8549ba", "#f67019", "#A288E3", "#CA3C25", "#FFBF00"];
+      const DEFAULT_COLORS = [
+        "#D20000",
+        "#FF822C",
+        "#FFC700",
+        "#00BC62",
+        "#319FFF",
+        "#4808D1",
+        "#A647D2",
+        "#2F80ED",
+        "#9B51E0",
+        "#828282",
+        "#f53794",
+        "#537bc4",
+        "#acc236",
+        "#166a8f",
+        "#00a950",
+        "#58595b",
+        "#8549ba",
+        "#f67019",
+        "#A288E3",
+        "#CA3C25",
+        "#FFBF00",
+      ];
       let color;
       let cursorIndex = 0;
 

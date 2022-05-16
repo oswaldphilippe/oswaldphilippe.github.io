@@ -1,4 +1,34 @@
 const participants = {
+  "FELCO SA": {
+    dimensions: {
+      CX: { criterias: { CX1: 3, CX2: 3, CX3: 3 }, score: 3.0 },
+      PI: { criterias: { PI1: 4, PI2: 2, PI3: 4 }, score: 3.3333333333333335 },
+      ST: { criterias: { ST1: 4, ST2: 4 }, score: 4.0 },
+      OR: { criterias: { OR1: 3, OR2: 4, OR3: 5 }, score: 4.0 },
+      PD: { criterias: { PD1: 3, PD2: 2, PD3: 2 }, score: 2.3333333333333335 },
+      CO: { criterias: { CO1: 3, CO2: 3, CO3: 3 }, score: 3.0 },
+      CU: { criterias: { CU1: 3, CU2: 3, CU3: 3 }, score: 3.0 },
+      IT: { criterias: { IT1: 2, IT2: 3, IT3: 3, IT4: 3 }, score: 2.75 },
+      TM: { criterias: { TM1: 1, TM2: 3, TM3: 3 }, score: 2.3333333333333335 },
+    },
+    company_name: "FELCO SA",
+    maturity_level: 3.0833333333333335,
+    email: "spoggi@felco.com",
+  },
+  "Maturité digitale globale": {
+    dimensions: {
+      CO: { score: 2.9491525423728815, criterias: { CO1: 2.9661016949152543, CO2: 2.694915254237288, CO3: 3.1864406779661016 } },
+      CU: { score: 3.0000000000000004, criterias: { CU1: 3.1186440677966103, CU2: 2.8135593220338984, CU3: 3.0677966101694913 } },
+      CX: { score: 2.621468926553672, criterias: { CX1: 2.9491525423728815, CX2: 2.3389830508474576, CX3: 2.5762711864406778 } },
+      IT: { score: 2.7161016949152543, criterias: { IT1: 1.847457627118644, IT2: 3.1186440677966103, IT3: 2.9661016949152543, IT4: 2.9322033898305087 } },
+      OR: { score: 3.0451977401129953, criterias: { OR1: 2.4745762711864407, OR2: 3.23728813559322, OR3: 3.4237288135593222 } },
+      PD: { score: 2.559322033898305, criterias: { PD1: 2.9152542372881354, PD2: 2.694915254237288, PD3: 2.0677966101694913 } },
+      PI: { score: 2.694915254237288, criterias: { PI1: 2.8983050847457625, PI2: 2.4237288135593222, PI3: 2.76271186440678 } },
+      ST: { score: 2.889830508474576, criterias: { ST1: 2.76271186440678, ST2: 3.016949152542373 } },
+      TM: { score: 2.4858757062146895, criterias: { TM1: 2.1186440677966103, TM2: 2.0508474576271185, TM3: 3.288135593220339 } },
+    },
+    company_name: "Maturité digitale globale",
+  },
   "NID SA": {
     dimensions: {
       CX: { criterias: { CX1: 5, CX2: 5, CX3: 5 }, score: 5.0 },
@@ -47,22 +77,6 @@ const participants = {
     maturity_level: 2.490740740740741,
     email: "pablo.vifian@ressortsindustriels.ch",
   },
-  "FELCO SA": {
-    dimensions: {
-      CX: { criterias: { CX1: 3, CX2: 3, CX3: 3 }, score: 3.0 },
-      PI: { criterias: { PI1: 4, PI2: 2, PI3: 4 }, score: 3.3333333333333335 },
-      ST: { criterias: { ST1: 4, ST2: 4 }, score: 4.0 },
-      OR: { criterias: { OR1: 3, OR2: 4, OR3: 5 }, score: 4.0 },
-      PD: { criterias: { PD1: 3, PD2: 2, PD3: 2 }, score: 2.3333333333333335 },
-      CO: { criterias: { CO1: 3, CO2: 3, CO3: 3 }, score: 3.0 },
-      CU: { criterias: { CU1: 3, CU2: 3, CU3: 3 }, score: 3.0 },
-      IT: { criterias: { IT1: 2, IT2: 3, IT3: 3, IT4: 3 }, score: 2.75 },
-      TM: { criterias: { TM1: 1, TM2: 3, TM3: 3 }, score: 2.3333333333333335 },
-    },
-    company_name: "FELCO SA",
-    maturity_level: 3.0833333333333335,
-    email: "spoggi@felco.com",
-  },
   "FAJI SA": {
     dimensions: {
       CX: { criterias: { CX1: 4, CX2: 3, CX3: 5 }, score: 4.0 },
@@ -110,20 +124,6 @@ const participants = {
     company_name: "Medtronic",
     maturity_level: 2.398148148148148,
     email: "vincent.collier@medtronic.com",
-  },
-  "Maturité digitale globale": {
-    dimensions: {
-      CO: { score: 2.9491525423728815, criterias: { CO1: 2.9661016949152543, CO2: 2.694915254237288, CO3: 3.1864406779661016 } },
-      CU: { score: 3.0000000000000004, criterias: { CU1: 3.1186440677966103, CU2: 2.8135593220338984, CU3: 3.0677966101694913 } },
-      CX: { score: 2.621468926553672, criterias: { CX1: 2.9491525423728815, CX2: 2.3389830508474576, CX3: 2.5762711864406778 } },
-      IT: { score: 2.7161016949152543, criterias: { IT1: 1.847457627118644, IT2: 3.1186440677966103, IT3: 2.9661016949152543, IT4: 2.9322033898305087 } },
-      OR: { score: 3.0451977401129953, criterias: { OR1: 2.4745762711864407, OR2: 3.23728813559322, OR3: 3.4237288135593222 } },
-      PD: { score: 2.559322033898305, criterias: { PD1: 2.9152542372881354, PD2: 2.694915254237288, PD3: 2.0677966101694913 } },
-      PI: { score: 2.694915254237288, criterias: { PI1: 2.8983050847457625, PI2: 2.4237288135593222, PI3: 2.76271186440678 } },
-      ST: { score: 2.889830508474576, criterias: { ST1: 2.76271186440678, ST2: 3.016949152542373 } },
-      TM: { score: 2.4858757062146895, criterias: { TM1: 2.1186440677966103, TM2: 2.0508474576271185, TM3: 3.288135593220339 } },
-    },
-    company_name: "Maturité digitale globale",
   },
 };
 

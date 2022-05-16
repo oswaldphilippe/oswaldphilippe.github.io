@@ -95,6 +95,22 @@ const participants = {
     maturity_level: 2.398148148148148,
     email: "l.cartier@sored-sa.com",
   },
+  Medtronic: {
+    dimensions: {
+      CX: { criterias: { CX1: 2, CX2: 1, CX3: 4 }, score: 2.3333333333333335 },
+      PI: { criterias: { PI1: 2, PI2: 4, PI3: 1 }, score: 2.3333333333333335 },
+      ST: { criterias: { ST1: 3, ST2: 4 }, score: 3.5 },
+      OR: { criterias: { OR1: 1, OR2: 3, OR3: 2 }, score: 2.0 },
+      PD: { criterias: { PD1: 3, PD2: 4, PD3: 4 }, score: 3.6666666666666665 },
+      CO: { criterias: { CO1: 3, CO2: 3, CO3: 4 }, score: 3.3333333333333335 },
+      CU: { criterias: { CU1: 4, CU2: 3, CU3: 4 }, score: 3.6666666666666665 },
+      IT: { criterias: { IT1: 3, IT2: 3, IT3: 3, IT4: 3 }, score: 3.0 },
+      TM: { criterias: { TM1: 3, TM2: 3, TM3: 3 }, score: 3.0 },
+    },
+    company_name: "Medtronic",
+    maturity_level: 2.398148148148148,
+    email: "vincent.collier@medtronic.com",
+  },
   "Maturité digitale globale": {
     dimensions: {
       CO: { score: 2.9491525423728815, criterias: { CO1: 2.9661016949152543, CO2: 2.694915254237288, CO3: 3.1864406779661016 } },

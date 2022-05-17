@@ -11,7 +11,6 @@ export default {
       let labels = [];
       for (let groupName in this.questionGroups) {
         let questionGroup = this.questionGroups[groupName];
-        console.log(questionGroup);
         labels.push(`${questionGroup.name} (${questionGroup.code})`);
       }
       return labels;

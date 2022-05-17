@@ -74,11 +74,12 @@ export default {
               position: "top",
               align: "start",
               labels: {
+                padding: 16,
                 usePointStyle: true,
                 pointStyle: "circle",
-                boxWidth: 6,
+                boxWidth: 12,
                 font: {
-                  size: 16,
+                  size: 18,
                 },
               },
             },

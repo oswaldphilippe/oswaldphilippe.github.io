@@ -71,7 +71,8 @@ export default {
               labels: {
                 usePointStyle: true,
                 pointStyle: "circle",
-                boxWidth: 6,
+                boxWidth: 10,
+                padding: 20,
                 font: {
                   size: 16,
                 },

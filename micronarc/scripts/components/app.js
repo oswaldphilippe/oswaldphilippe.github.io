@@ -98,8 +98,8 @@ export default {
     <h2 class="font-bold text-2xl mb-4">Moyenne de maturité digitale par dimension</h2>
     <hr class="my-8"/>
       <div class="flex justify-items-stretch w-100" style="height:90vh;">
-        <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8 basis-0 grow"></dimension-average-comparison>
-        <div class="ml-4">
+        <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8 basis-0 grow" style="width:65%;"></dimension-average-comparison>
+        <div class="ml-4" style="width:35%;">
           <div v-for="questionGroup, index in questionGroups" :key="questionGroup.code">
             <div class="font-bold">{{ questionGroup.name }}</div>
             <div class="text-gray-500">{{ questionGroup.description }}</div>

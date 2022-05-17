@@ -1,9 +1,13 @@
+import DatasetMixin from "../mixins/dataset-mixin.js";
+
 export default {
   data() {
     return {
       datasets: null,
     };
   },
+
+  mixins: [DatasetMixin],
 
   props: {
     criteria: {
@@ -27,29 +31,22 @@ export default {
   },
 
   mounted() {
-    this.datasets = this.generateDatasets();
+    this.datasets = this.generateParticipantsDatasets();
   },
 
   methods: {
-    generateDatasets() {
-      let intelli = participants;
-      const generatedDatasets = [];
-      const parsedKeys = [];
+    generateParticipantsDatasets() {
+      return this.generateDatasets(this.participants, this.makeDataset);
+    },
 
-      for (let participantKey in this.participants) {
-        if (!parsedKeys.find((k) => k == participantKey)) {
-          const participant = this.participants[participantKey];
-          const dataset = {};
-          dataset.label = participant.company_name;
-          dataset.data = [participant.dimensions[this.dimensionCode].criterias[this.criteria]];
-          dataset.backgroundColor = participant.color;
+    makeDataset(participant) {
+      const dataset = {};
 
-          generatedDatasets.push(dataset);
-          parsedKeys.push(participantKey);
-        }
-      }
+      dataset.label = participant.company_name;
+      dataset.data = [participant.dimensions[this.dimensionCode].criterias[this.criteria]];
+      dataset.backgroundColor = participant.color;
 
-      return generatedDatasets;
+      return dataset;
     },
   },
 

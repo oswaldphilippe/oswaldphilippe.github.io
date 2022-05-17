@@ -78,6 +78,13 @@ export default {
               },
             },
           },
+          datasets: {
+            bar: {
+              barThickness: "flex",
+              barPercentage: 0.6,
+              categoryPercentage: 0.95,
+            },
+          },
           elements: {
             bar: {
               borderRadius: 10,

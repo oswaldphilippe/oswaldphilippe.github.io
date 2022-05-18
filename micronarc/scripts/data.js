@@ -13,7 +13,6 @@ const participants = {
     },
     company_name: "FELCO SA",
     maturity_level: 3.0833333333333335,
-    email: "spoggi@felco.com",
   },
   "Maturité digitale globale": {
     dimensions: {
@@ -43,7 +42,6 @@ const participants = {
     },
     company_name: "NID SA",
     maturity_level: 3.8518518518518525,
-    email: "gilles@beljakovic.ch",
   },
   "HL-Technology SA": {
     dimensions: {
@@ -59,7 +57,6 @@ const participants = {
     },
     company_name: "HL-Technology SA",
     maturity_level: 3.824074074074074,
-    email: "jvonkaenel@hl-technology.ch",
   },
   "Ressorts Industriels SA": {
     dimensions: {
@@ -75,7 +72,6 @@ const participants = {
     },
     company_name: "Ressorts Industriels SA",
     maturity_level: 2.490740740740741,
-    email: "pablo.vifian@ressortsindustriels.ch",
   },
   "FAJI SA": {
     dimensions: {
@@ -91,7 +87,6 @@ const participants = {
     },
     company_name: "FAJI SA",
     maturity_level: 3.4259259259259256,
-    email: "pierre-yves.kohler@faji.ch",
   },
   "Sored SA": {
     dimensions: {
@@ -107,7 +102,6 @@ const participants = {
     },
     company_name: "Sored SA",
     maturity_level: 2.398148148148148,
-    email: "l.cartier@sored-sa.com",
   },
   Medtronic: {
     dimensions: {
@@ -123,7 +117,6 @@ const participants = {
     },
     company_name: "Medtronic",
     maturity_level: 2.398148148148148,
-    email: "vincent.collier@medtronic.com",
   },
 };
 

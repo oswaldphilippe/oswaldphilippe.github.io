@@ -93,40 +93,42 @@ export default {
   },
 
   template: `
-  <content-wrapper>
-    <div>
+<content-wrapper>
+  <div>
     <h2 class="font-bold text-2xl mb-4">Moyenne de maturité digitale par dimension</h2>
-    <hr class="my-8"/>
-      <div class="flex justify-items-stretch w-100" style="height:90vh;">
-        <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8 basis-0 grow" style="width:65%;"></dimension-average-comparison>
-        <div class="ml-4" style="width:35%;">
-          <div v-for="questionGroup, index in questionGroups" :key="questionGroup.code">
-            <div class="font-bold">{{ questionGroup.name }}</div>
-            <div class="text-gray-500">{{ questionGroup.description }}</div>
-            <hr class="my-3" />
-          </div>
+    <hr class="my-8" />
+    <div class="flex justify-items-stretch w-100">
+      <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8 basis-0 grow h-screen" style="width: 65%"></dimension-average-comparison>
+      <div class="pl-4 self-center hidden lg:block" style="width: 30%">
+        <div v-for="questionGroup, index in questionGroups" :key="questionGroup.code">
+          <div class="font-bold">{{ questionGroup.name }}</div>
+          <div class="text-gray-500">{{ questionGroup.description }}</div>
+          <hr class="my-3" />
         </div>
-      </div>
-      </div>
-      <h2 class="font-bold text-2xl mb-4">Détail des dimensions</h2>
-      <hr class="my-8"/>
-      <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" class="shadow rounded overflow-hidden px-20 py-11 mb-11 bg-white">
-      <div class="text-2xl mb-8" style="margin-left:6px;margin-right:10px;">{{ questionGroup.name }} ({{ groupCode }})</div>
-      <div v-for="criteria, criteriaCode  in questionGroup.questions" :key="criteriaCode" class="rounded overflow-hidden mb-11">
-        <div class="font-bold bg-slate-200 p-3" style="margin-left:6px;margin-right:10px;">{{ criteria.name }} ({{ criteriaCode }})</div>
-        <div class="shadow-lg answers-container flex items-stretch border mx-1" style="margin-left:6px;margin-right:10px;">
-          <div v-for="answerObject, index in criteria.answers" :key="index" class="basis-0 flex-grow border-x">
-            <template v-for="text, value in answerObject" :key="value">
-              <div class="flex flex-col justify-items-stretch">
-                <div class="p-3 border-y">{{ value }}</div>
-                <div class="p-3">{{ text }}</div>
-              </div>
-            </template>
-          </div>
-        </div>
-        
-        <criteria-comparison :criteria="criteriaCode" :participants="participants" :question-groups="questionGroups"></criteria-comparison>
       </div>
     </div>
-  </content-wrapper>`,
+  </div>
+  <h2 class="font-bold text-2xl mb-4">Détail des dimensions</h2>
+  <hr class="my-8" />
+  <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" class="shadow rounded overflow-hidden px-0 lg:px-20 py-0 lg:py-11 mb-11 bg-white">
+    <div class="text-2xl mb-8" style="margin-left: 6px; margin-right: 10px">{{ questionGroup.name }} ({{ groupCode }})</div>
+    <div v-for="criteria, criteriaCode  in questionGroup.questions" :key="criteriaCode" class="rounded overflow-hidden mb-11">
+      <div class="font-bold bg-slate-200 p-3" style="margin-left: 6px; margin-right: 10px">{{ criteria.name }} ({{ criteriaCode }})</div>
+      <div class="shadow-lg answers-container flex items-stretch border mx-1" style="margin-left: 6px; margin-right: 10px">
+        <div v-for="answerObject, index in criteria.answers" :key="index" class="basis-0 flex-grow border-x">
+          <template v-for="text, value in answerObject" :key="value">
+            <div class="flex flex-col justify-items-stretch">
+              <div class="p-3 border-y">{{ value }}</div>
+              <div class="p-3">{{ text }}</div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <criteria-comparison :criteria="criteriaCode" :participants="participants" :question-groups="questionGroups"></criteria-comparison>
+    </div>
+  </div>
+</content-wrapper>
+
+  `,
 };

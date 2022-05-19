@@ -27,6 +27,7 @@ const participants = {
       TM: { score: 2.389784946236559, criterias: { TM1: 2.2016129032258065, TM2: 2.0725806451612905, TM3: 2.8951612903225805 } },
     },
     company_name: "Maturité digitale globale",
+    maturity_level: 2.626642771804062,
   },
   "NID SA": {
     dimensions: {

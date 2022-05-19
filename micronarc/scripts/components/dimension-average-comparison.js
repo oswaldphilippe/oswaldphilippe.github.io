@@ -29,11 +29,29 @@ export default {
       return this.generateDatasets(this.participants, this.makeDataset);
     },
 
+    getMaturityLevelDescriptionFromScore(score) {
+      if (score >= 0 && score < 1.25) {
+        return "Initiée";
+      }
+      if (score >= 1.25 && score < 2.5) {
+        return "Convaincue";
+      }
+      if (score >= 2.5 && score < 3.5) {
+        return "Engagée";
+      }
+      if (score >= 3.5 && score < 4.5) {
+        return "Portée par le numérique";
+      }
+      if (score >= 4 && score <= 5) {
+        return "Référent";
+      }
+    },
+
     makeDataset(participant) {
       const dataset = {};
       let data = [];
 
-      dataset.label = participant.company_name;
+      dataset.label = `${participant.company_name} (${this.getMaturityLevelDescriptionFromScore(participant.maturity_level)})`;
 
       for (let dimension in participant.dimensions) {
         data.push(participant.dimensions[dimension].score);

@@ -14,6 +14,11 @@ export default {
       type: Boolean,
       required: false,
     },
+    staticLabels: {
+      type: Array,
+      required: false,
+      default: [],
+    },
     criteria: {
       type: String,
       required: true,
@@ -37,7 +42,7 @@ export default {
   mounted() {
     let datasets = this.generateParticipantsDatasets();
     if (this.random) {
-      datasets = this.randomizeDatasets(datasets);
+      datasets = this.randomizeDatasets(datasets, this.staticLabels);
     }
     this.datasets = datasets;
   },
@@ -57,12 +62,24 @@ export default {
       return dataset;
     },
 
-    randomizeDatasets(datasets) {
+    randomizeDatasets(datasets, staticLabels = []) {
       let anonym_labels = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
       anonym_labels = anonym_labels.slice(0, datasets.length);
-      let anonym_colors = datasets.map((value) => value.backgroundColor);
+      let staticDatasets = [];
+      let randomized = [];
 
-      let shuffledDatasets = datasets
+      for (let dataset of datasets) {
+        let ignoredItem = staticLabels.find((label) => label === dataset.label);
+        if (ignoredItem !== undefined) {
+          staticDatasets.push(dataset);
+        } else {
+          randomized.push(dataset);
+        }
+      }
+
+      let anonym_colors = randomized.map((value) => value.backgroundColor);
+
+      let shuffledDatasets = randomized
         .map((value) => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value);
@@ -77,7 +94,7 @@ export default {
         anonym_colors.push(element.backgroundColor);
       });
 
-      return shuffledDatasets;
+      return [...staticDatasets, ...shuffledDatasets];
     },
   },
 

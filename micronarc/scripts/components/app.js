@@ -18,7 +18,7 @@ export default {
 
     navigationRefs() {
       const refs = [];
-      refs.push({ id: "radar", subs: [] });
+      refs.push({ id: "radar", name: "Radar", subs: [] });
 
       for (let groupCode in this.questionGroups) {
         let dimRef = { id: groupCode, subs: [] };

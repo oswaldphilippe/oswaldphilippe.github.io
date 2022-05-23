@@ -125,7 +125,7 @@ export default {
         </div>
       </div>
 
-      <criteria-comparison :criteria="criteriaCode" :participants="participants" :question-groups="questionGroups" random :staticLabels="['FELCO SA', 'Maturité digitale globale']"></criteria-comparison>
+      <criteria-comparison :criteria="criteriaCode" :participants="participants" :question-groups="questionGroups" :staticLabels="['FELCO SA', 'Maturité digitale globale']"></criteria-comparison>
     </div>
   </div>
 </content-wrapper>

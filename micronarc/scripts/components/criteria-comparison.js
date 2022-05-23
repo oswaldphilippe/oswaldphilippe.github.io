@@ -10,6 +10,10 @@ export default {
   mixins: [DatasetMixin],
 
   props: {
+    random: {
+      type: Boolean,
+      required: false,
+    },
     criteria: {
       type: String,
       required: true,
@@ -31,7 +35,11 @@ export default {
   },
 
   mounted() {
-    this.datasets = this.generateParticipantsDatasets();
+    let datasets = this.generateParticipantsDatasets();
+    if (this.random) {
+      datasets = this.randomizeDatasets(datasets);
+    }
+    this.datasets = datasets;
   },
 
   methods: {
@@ -47,6 +55,29 @@ export default {
       dataset.backgroundColor = participant.color;
 
       return dataset;
+    },
+
+    randomizeDatasets(datasets) {
+      let anonym_labels = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
+      anonym_labels = anonym_labels.slice(0, datasets.length);
+      let anonym_colors = datasets.map((value) => value.backgroundColor);
+
+      let shuffledDatasets = datasets
+        .map((value) => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+
+      shuffledDatasets.forEach((element, index) => {
+        element.label = anonym_labels[index];
+        anonym_colors.push(element.backgroundColor);
+      });
+
+      shuffledDatasets.forEach((element, index) => {
+        element.backgroundColor = anonym_colors[index];
+        anonym_colors.push(element.backgroundColor);
+      });
+
+      return shuffledDatasets;
     },
   },
 

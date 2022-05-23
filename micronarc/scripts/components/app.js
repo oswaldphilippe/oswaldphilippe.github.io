@@ -125,7 +125,7 @@ export default {
         </div>
       </div>
 
-      <criteria-comparison :criteria="criteriaCode" :participants="participants" :question-groups="questionGroups"></criteria-comparison>
+      <criteria-comparison :criteria="criteriaCode" :participants="participants" :question-groups="questionGroups" random></criteria-comparison>
     </div>
   </div>
 </content-wrapper>

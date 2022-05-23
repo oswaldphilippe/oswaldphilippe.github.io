@@ -15,6 +15,24 @@ export default {
       }
       return labels;
     },
+
+    navigationRefs() {
+      const refs = [];
+      refs.push({ id: "radar", name: "Radar", subs: [] });
+
+      for (let groupCode in this.questionGroups) {
+        let dimRef = { id: groupCode, subs: [] };
+        refs.push(dimRef);
+
+        let group = this.questionGroups[groupCode];
+        for (let criteriaCode in group.questions) {
+          let critRef = { id: criteriaCode, name: criteriaCode.slice(criteriaCode.length - 1, criteriaCode.length) };
+          dimRef.subs.push(critRef);
+        }
+      }
+
+      return refs;
+    },
   },
 
   beforeMount() {
@@ -32,6 +50,15 @@ export default {
   },
 
   methods: {
+    scrollTo(id) {
+      let element = document.getElementById(id);
+      window.scrollTo({
+        top: element.offsetTop - 120,
+        behavior: "smooth",
+        block: "center",
+      });
+    },
+
     addColorsToParticipants(staticParticipantsColors = {}) {
       const usedColors = new Set();
       const DEFAULT_COLORS = [
@@ -94,11 +121,12 @@ export default {
 
   template: `
 <content-wrapper>
+  <app-navigation :refs="navigationRefs" @navigation-clicked="scrollTo"></app-navigation>
   <div>
     <h2 class="font-bold text-2xl mb-4">Moyenne de maturité digitale par dimension</h2>
     <hr class="my-8" />
     <div class="flex justify-items-stretch w-100">
-      <dimension-average-comparison :participants="participants" :labels="labels" class="mb-8 basis-0 grow h-screen" style="width: 65%"></dimension-average-comparison>
+      <dimension-average-comparison id="radar" :participants="participants" :labels="labels" class="mb-8 basis-0 grow h-screen" style="width: 65%"></dimension-average-comparison>
       <div class="pl-4 self-center hidden lg:block" style="width: 30%">
         <div v-for="questionGroup, index in questionGroups" :key="questionGroup.code">
           <div class="font-bold">{{ questionGroup.name }}</div>
@@ -110,9 +138,9 @@ export default {
   </div>
   <h2 class="font-bold text-2xl mb-4">Détail des dimensions</h2>
   <hr class="my-8" />
-  <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" class="shadow rounded overflow-hidden px-0 lg:px-20 py-0 lg:py-11 mb-11 bg-white">
+  <div v-for="questionGroup, groupCode in questionGroups" :key="groupCode" :id="groupCode" class="shadow rounded overflow-hidden px-0 lg:px-20 py-0 lg:py-11 mb-11 bg-white">
     <div class="text-2xl mb-8" style="margin-left: 6px; margin-right: 10px">{{ questionGroup.name }} ({{ groupCode }})</div>
-    <div v-for="criteria, criteriaCode  in questionGroup.questions" :key="criteriaCode" class="rounded overflow-hidden mb-11">
+    <div v-for="criteria, criteriaCode  in questionGroup.questions" :id="criteriaCode" :key="criteriaCode" class="rounded overflow-hidden mb-11">
       <div class="font-bold bg-slate-200 p-3" style="margin-left: 6px; margin-right: 10px">{{ criteria.name }} ({{ criteriaCode }})</div>
       <div class="shadow-lg answers-container flex items-stretch border mx-1" style="margin-left: 6px; margin-right: 10px">
         <div v-for="answerObject, index in criteria.answers" :key="index" class="basis-0 flex-grow border-x">

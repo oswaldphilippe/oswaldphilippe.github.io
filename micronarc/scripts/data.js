@@ -29,21 +29,6 @@ const participants = {
     company_name: "Maturité digitale globale",
     maturity_level: 2.5,
   },
-  // "Sored SA": {
-  //   dimensions: {
-  //     CX: { criterias: { CX1: 1, CX2: 1, CX3: 3 }, score: 1.6666666666666667 },
-  //     PI: { criterias: { PI1: 1, PI2: 2, PI3: 2 }, score: 1.6666666666666667 },
-  //     ST: { criterias: { ST1: 3, ST2: 2 }, score: 2.5 },
-  //     OR: { criterias: { OR1: 1, OR2: 3, OR3: 3 }, score: 2.3333333333333335 },
-  //     PD: { criterias: { PD1: 3, PD2: 2, PD3: 3 }, score: 2.6666666666666665 },
-  //     CO: { criterias: { CO1: 2, CO2: 1, CO3: 2 }, score: 1.6666666666666667 },
-  //     CU: { criterias: { CU1: 3, CU2: 3, CU3: 3 }, score: 3.0 },
-  //     IT: { criterias: { IT1: 1, IT2: 4, IT3: 2, IT4: 4 }, score: 2.75 },
-  //     TM: { criterias: { TM1: 4, TM2: 2, TM3: 4 }, score: 3.3333333333333335 },
-  //   },
-  //   company_name: "Sored SA",
-  //   maturity_level: 2.39,
-  // },
   Medtronic: {
     dimensions: {
       CX: { criterias: { CX1: 2, CX2: 1, CX3: 4 }, score: 2.3333333333333335 },
